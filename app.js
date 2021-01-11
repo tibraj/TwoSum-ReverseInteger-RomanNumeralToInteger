@@ -25,4 +25,18 @@ function reverse(x) {
     }
     return reversed;
 }
+
 //Roman Numeral to Integer
+function roman(x) {
+    const conversion = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1};
+    x = array.split('');
+    let total = 0;
+    for(i = 0; i < array.length; i++) {
+        if(conversion[array[i]] < conversion[array[i + 1]]) {
+            total -= conversion[array[i]]
+        } else {
+            total += conversion[array[i]]
+        }
+    }
+    return total;
+}
