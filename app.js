@@ -12,6 +12,17 @@ function twoSum(array, target) {
         }
     }
 }
-//Reverse Integer
 
+//Reverse Integer
+function reverse(x) {
+    if(x < 0) {
+        x = x * -1
+    }
+    let reversed = 0;
+    while(x > 0) {
+        reversed = (reversed * 10) + (x % 10);
+        x = parseInt(x / 10);
+    }
+    return reversed;
+}
 //Roman Numeral to Integer
