@@ -6,7 +6,7 @@ function twoSum(array, target) {
         let neededValue = target - currentNumber;
         let index2 = previousValues[neededValue];
         if(index2 !== null) {
-            return {index2, 1}
+            return {index2, i}
         } else {
             previousValues[currentNumber] = i;
         }
